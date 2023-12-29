@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Production and Collection</title>
+<title>Panel Data and Google Trends</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,20 +23,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,57 +73,87 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-<div class="quarto-about-jolla">
- <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Production and Collection</h1>
+<h1 class="title">Panel Data and Google Trends</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><div id="hero-heading">
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="/EPPS_6302_Presentation.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-cast"></i>
-     <span class="about-link-text">Final Project</span>
-  </a>
-  <a href="/datamethods_finalproject.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-text"></i>
-     <span class="about-link-text">Final Paper</span>
-  </a>
-  <a href="https://slides.com/sharon_j/project-proposal" class="about-link" rel="" target="">
-    <i class="bi bi-file-slides"></i>
-     <span class="about-link-text">Project Proposal</span>
-  </a>
-</div>
-</div>
+  
 
-<section id="assignments" class="level2">
-<h2 data-anchor-id="assignments">Assignments</h2>
-<ul>
-<li><a href="./posts/index1.html">Assignment 1</a></li>
-</ul>
-<figure style="float: right; margin-right: 10px;" class="figure">
-<iframe src="https://sharonjepkosgei.github.io/data_files/plot1" width="500" height="400" frameborder="0">
-</iframe>
+</header>
+
+<section id="part-a-building-a-qualtrics-panel" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-building-a-qualtrics-panel">Part A: Building a Qualtrics Panel</h3>
+<p>Adding Panel:</p>
+<ol type="1">
+<li>Go to <strong>Directories</strong> (Left-upper menu)</li>
+<li>Then <strong>Lists</strong> and create list.</li>
+</ol>
+<details>
+<summary>
+My Panel
+</summary>
+<p><img src="CaptureList.PNG" class="img-fluid"></p>
+</details>
+</section>
+<section id="part-b-google-trends-data" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-google-trends-data">Part B: Google Trends Data</h3>
+<details>
+<summary>
+Code
+</summary>
+<p>install.packages(“gtrendsR”)</p>
+<p>library(gtrendsR)</p>
+<p>BidenTrumpElection = gtrends(c(“Trump”,“Biden”,“election”), time = “all”)</p>
+<p>par(family=“Georgia”)</p>
+<p>plot(BidenTrumpElection)</p>
+</details>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Rplot.png" class="img-fluid figure-img"></p>
 </figure>
-<ul>
-<li><p><a href="./posts/EPPS_6302_02.html">Assignment 2</a></p></li>
-<li><p><a href="./posts/EPPS_6302_03.html">Assignment 3</a></p></li>
-<li><p><a href="./posts/EPPS_6302_04.html">Assignment 4</a></p></li>
-<li><p><a href="./posts/EPPS_6302_06.html">Assignment 6</a></p></li>
-<li><p><a href="./posts/EPPS_6302_07.html">Assignment 7</a></p></li>
-<li><p><a href="./posts/index8.html">Assignment 8</a></p></li>
-</ul>
-
+</div>
+</section>
+<section id="differences" class="level3">
+<h3 class="anchored" data-anchor-id="differences">Differences</h3>
+<ol type="1">
+<li><strong><em>Automation</em></strong></li>
+</ol>
+<p>gtrendsR allows you to automate the data retrieval process using R scripts. This can save you time and effort compared to manually visiting the Google Trends website each time.</p>
+<ol start="2" type="1">
+<li><strong><em>Data Processing</em></strong></li>
+</ol>
+<p>With gtrendsR, you can process and analyze Google Trends data directly within R, making it easier to perform complex analyses, create visualizations, and combine Google Trends data with other datasets.</p>
+<ol start="3" type="1">
+<li><strong>Customization</strong></li>
+</ol>
+<p>While the Google Trends website offers customization options, gtrendsR provides finer control over data retrieval parameters, such as date ranges and geographic regions. You can also specify additional query parameters not available on the website.</p>
+<p>Example:</p>
+<p><strong><em>One keyword</em></strong></p>
+<p>plot(gtrends(“transgender”, time = “all”))</p>
+<p><img src="tg.png" class="img-fluid" width="400"></p>
+<p><strong><em>Adjust geographic region</em></strong></p>
+<p>plot(gtrends(c(“transgender”), geo = c(“US”,“GB”,“TW”), time = “all”))</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Rplottgcou.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p><strong><em>Multiple Keywords</em></strong></p>
+<p>plot(gtrends(c(“transgender”, “women right”, “feminism”), time = “all”))</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Rplot01twf.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 
 
 </section>
@@ -148,6 +179,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
