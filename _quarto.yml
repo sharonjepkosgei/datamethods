@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: docs
+format:
+  html:
+    theme: cyborg
+    mainfont: Open Sans
+    fontsize: 1.5rem
+    monofont: playfair 
+
+editor: visual

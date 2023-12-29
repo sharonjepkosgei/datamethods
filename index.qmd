@@ -1,0 +1,29 @@
+---
+title: "Data Production and Collection"
+image: image.jpg
+resources:
+  - EPPS_6302_Presentation.pdf
+  - datamethods_finalproject.pdf
+about: 
+  id: hero-heading
+  template: jolla
+  image-width: 15em
+  image-shape: round
+  
+  links: 
+    - text: Final Project
+      icon: cast
+      href: EPPS_6302_Presentation.pdf
+    - text: Final Paper
+      icon: file-text
+      href: datamethods_finalproject.pdf
+    - text: Project Proposal
+      icon: file-slides
+      href: https://slides.com/sharon_j/project-proposal
+---
+
+::: {#hero-heading}
+:::
+
+## Assignments
+
